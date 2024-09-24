@@ -1,0 +1,156 @@
+<!-- Navbar -->
+{% include "header.html" %}
+<br /><br /><style>
+  @media (max-width: 780.98px) {
+    .col-12.a {
+      width: 100% !important;
+      height: 200px;
+    }
+  }
+</style>
+{% load static %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-12 a" style="width: 30%; height: 500px">
+      <a href="/media/{{staff.profile_picture}}"
+        ><img
+          src="/media/{{staff.profile_picture}}"
+          class="img-fluid"
+          style="width: 85%; height: 85%"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-6 col-md-6 col-12 b" style="align-itme: center">
+      <blockquote
+        class="blockquote text-start fs-4"
+        style="
+          font-family: 'Roboto', sans-serif;
+          color: black;
+          font-weight: bolder;
+        "
+      >
+        {{staff.name}}
+      </blockquote>
+
+      <p style="font-size: larger; font-weight: bolder">
+        Qualification :<span style="color: #32a1cd; margin-left: 20px"
+          >{{staff.qualification}}</span
+        >
+      </p>
+      <p style="font-size: larger; font-weight: bolder">
+        Address :<span style="color: #32a1cd; margin-left: 20px"
+          >{{staff.address}}</span
+        >
+      </p>
+
+      <p style="font-size: larger; font-weight: bolder">
+        Speciality :<span style="color: #32a1cd; margin-left: 20px"
+          >{{staff.specialization}}</span
+        >
+      </p>
+      <p style="font-size: larger; font-weight: bolder">
+        Contact :<span style="color: #32a1cd; margin-left: 20px"
+          >{{staff.phone_number}}</span
+        >
+      </p>
+      <p style="font-size: larger; font-weight: bolder">
+        Email :<span style="color: #32a1cd; margin-left: 20px"
+          >{{staff.email}}</span
+        >
+      </p>
+
+      <p style="font-size: larger; font-weight: bolder">
+        Current Student? :<span style="color: #32a1cd; margin-left: 20px"
+          >{% if staff.is_student %}
+          Yes
+          {% else %}
+          No
+          {% endif %}</span
+        >
+      </p>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
+
+<!-- footer -->
+
+<style>
+  .cr {
+    display: none;
+    padding-top: 15px;
+    padding-left: 25px;
+  }
+
+  .text-gray {
+    color: gray;
+  }
+
+  .rate {
+    width: 68px;
+    border: 2px solid #666666;
+    border-radius: 2px;
+  }
+
+  .type {
+    border: 2px solid #666666;
+    font-size: 14px;
+    padding: 4px;
+    font-weight: 700;
+    background-color: #666666;
+    color: white;
+  }
+
+  .type2 {
+    border: 2px solid #666666;
+    font-size: 14px;
+    padding: 4px;
+    font-weight: 700;
+  }
+
+  .sztitle {
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 4px;
+    font-weight: 700;
+  }
+
+  .price {
+    margin-bottom: 10px;
+  }
+
+  .card {
+    width: 70px;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #191919;
+  }
+
+  .addcart {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #2874f0;
+    color: #191919;
+    padding: 20px 40px;
+  }
+
+  .widhlist {
+    border: 2px solid #666666;
+    font-size: 18px;
+    font-weight: 600;
+    color: #666666;
+    padding: 20px 40px;
+  }
+
+  .widhlist:hover {
+    background-color: #2874f0;
+    color: #191919;
+    border: #2874f0;
+    border: 1px solid black;
+  }
+</style>
