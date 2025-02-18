@@ -1,0 +1,284 @@
+{% include "header.html" %} {% load static %}
+<!-- Header Start -->
+<div class="container-fluid bg-primary mb-5">
+  <div
+    class="d-flex flex-column align-items-center justify-content-center"
+    style="min-height: 200px"
+  >
+    <h3 class="display-3 font-weight-bold text-white">About Us</h3>
+    <div class="d-inline-flex text-white">
+      <p class="m-0"><a class="text-white" href="">Home</a></p>
+      <p class="m-0 px-2">/</p>
+      <p class="m-0">About Us</p>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5" style="heigh">
+        <img
+          class="img-fluid rounded mb-5 mb-lg-0"
+          src="{{ab.big_image.url}}"
+          style="width: 100%"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-7">
+        <p class="section-title pr-5">
+          <span class="pr-2">Learn About Us</span>
+        </p>
+        <h1 class="mb-4">Best School For Your Childrens</h1>
+        <p>"{{ab.description}}"</p>
+        <div class="row pt-2 pb-4">
+          <div class="col-6 col-md-4">
+            <img
+              class="img-fluid rounded"
+              src="{{ab.small_image.url}}"
+              style="width: 100%"
+              alt=""
+            />
+          </div>
+          <div class="col-6 col-md-8">
+            <ul class="list-inline m-0">
+              <li class="py-2 border-top border-bottom">
+                <i class="fa fa-check text-primary mr-3"></i>
+                Critical thinking ability
+              </li>
+              <li class="py-2 border-bottom">
+                <i class="fa fa-check text-primary mr-3"></i>
+                Problem-solving skills
+              </li>
+              <li class="py-2 border-bottom">
+                <i class="fa fa-check text-primary mr-3"></i>
+                Physical and Mental Care
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+<!-- Facilities Start -->
+<div class="container-fluid pt-5">
+  <div class="container pb-3">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 pb-1">
+        <div
+          class="d-flex bg-light shadow-sm border-top rounded mb-4"
+          style="padding: 30px"
+        >
+          <img
+            class="img-fluid mb-3"
+            src="{% static 'img/playground.png'%}"
+            style="width: 50px; height: 50px; color: blue"
+            alt=""
+          />
+          <div class="pl-4">
+            <h4>Play Ground</h4>
+            <p class="m-0">
+              Playgrounds are crucial for children's physical, emotional, and
+              social development. They promote exercise, motor skills, and
+              health while offering stress relief and confidence building.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pb-1">
+        <div
+          class="d-flex bg-light shadow-sm border-top rounded mb-4"
+          style="padding: 30px"
+        >
+          <img
+            class="img-fluid mb-3"
+            src="{% static 'img/classroom.png'%}"
+            style="width: 50px; height: 50px; color: blue"
+            alt=""
+          />
+
+          <div class="pl-4">
+            <h4>Classrooms & Seminar</h4>
+            <p class="m-0">
+              We manage the good learning environment by managing classrooms
+              having fans, white board (marker), watch and poen to clean and the
+              best place to gather student i.e Seminar Hall.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pb-1">
+        <div
+          class="d-flex bg-light shadow-sm border-top rounded mb-4"
+          style="padding: 30px"
+        >
+          <img
+            class="img-fluid mb-3"
+            src="{% static 'img/toilet.png'%}"
+            style="width: 50px; height: 50px; color: blue"
+            alt=""
+          />
+          <div class="pl-4">
+            <h4>Toilet & Washroom</h4>
+            <p class="m-0">
+              Toilet and Washrooms are very important at any place to facilate
+              any students even faculties whenever they need. That's why we have
+              built 8 toilets (4 for female and 4 for male).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pb-1">
+        <div
+          class="d-flex bg-light shadow-sm border-top rounded mb-4"
+          style="padding: 30px"
+        >
+          <img
+            class="img-fluid mb-3"
+            src="{% static 'img/weekend.png'%}"
+            style="width: 50px; height: 50px; color: blue"
+            alt=""
+          />
+          <div class="pl-4">
+            <h4>Weekend Celebration</h4>
+            <p class="m-0">
+              We encourage our students for different activities at every Friday
+              that includes Quize Competetion, Drawing Competetion, Games, and
+              son.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pb-1">
+        <div
+          class="d-flex bg-light shadow-sm border-top rounded mb-4"
+          style="padding: 30px"
+        >
+          <img
+            class="img-fluid mb-3"
+            src="{% static 'img/canteen.png'%}"
+            style="width: 50px; height: 50px; color: blue"
+            alt=""
+          />
+          <div class="pl-4">
+            <h4>Stationary & Canteen</h4>
+            <p class="m-0">
+              Student may need to buy the necessary things like pen, pencil,
+              copy. Students can have their snacks at canteen, which is
+              facilated at our School.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pb-1">
+        <div
+          class="d-flex bg-light shadow-sm border-top rounded mb-4"
+          style="padding: 30px"
+        >
+          <img
+            class="img-fluid mb-3"
+            src="{% static 'img/tour.png'%}"
+            style="width: 50px; height: 50px; color: blue"
+            alt=""
+          />
+          <div class="pl-4">
+            <h4>Educational Tour</h4>
+            <p class="m-0">
+              We believe in partical knowledge. We organize several Educational
+              tour that's enchance the memory of the Students as well as
+              Teachers
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Facilities Start -->
+
+<!-- Team Start -->
+<div class="container-fluid pt-5">
+  <div class="container">
+    <div class="text-center pb-2">
+      <p class="section-title px-5">
+        <span class="px-2">Our Teachers</span>
+      </p>
+      <h1 class="mb-4">Meet Our Teachers</h1>
+    </div>
+    <div class="row">
+      {% for detail in staff %}
+      <div class="col-md-6 col-lg-3 text-center team mb-5">
+        <a href="staff{{detail.id}}">
+          <div
+            class="position-relative overflow-hidden mb-4"
+            style="border-radius: 30%; width: 250px; height: 300px"
+          >
+            <img
+              class="img-fluid w-100"
+              src="/media/{{detail.profile_picture}}"
+              alt=""
+              style="width: 100%; height: 100%"
+            />
+
+            <div
+              class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute"
+            ></div>
+          </div>
+
+          <h4>{{detail.name}}</h4>
+          <i>{{detail.specialization}}</i>
+        </a>
+      </div>
+
+      {% endfor %}
+      <a href="team.html" class="btn btn-primary px-4 mx-auto mb-4"
+        >All Teacher</a
+      >
+    </div>
+  </div>
+</div>
+<!-- Team End -->
+
+<!-- Testimonial Start -->
+<div class="container-fluid py-5">
+  <div class="container p-0">
+    <div class="text-center pb-2">
+      <p class="section-title px-5">
+        <span class="px-2">Testimonial</span>
+      </p>
+      <h1 class="mb-4">What Parents Say!</h1>
+    </div>
+    <div class="owl-carousel testimonial-carousel">
+      {% for p in parent %}
+      <div class="testimonial-item px-3">
+        <div class="bg-light shadow-sm rounded mb-4 p-4">
+          <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+          {{p.opnion}}
+        </div>
+        <div class="d-flex align-items-center">
+          <img
+            class="rounded-circle"
+            src="{{p.image.url}}"
+            style="width: 70px; height: 70px"
+            alt="Image"
+          />
+          <div class="pl-3">
+            <h5>{{p.name}}</h5>
+            <i>{{p.address}}</i>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- Testimonial End -->
+
+<!-- Footer Start -->
+{% include "footer.html" %}

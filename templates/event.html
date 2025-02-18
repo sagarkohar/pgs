@@ -1,0 +1,87 @@
+{% include "header.html" %}
+<!-- Navbar End -->
+{% load static %}
+
+<!-- Header Start -->
+<div class="container-fluid bg-primary mb-5">
+  <div
+    class="d-flex flex-column align-items-center justify-content-center"
+    style="min-height: 200px"
+  >
+    <h3 class="display-3 font-weight-bold text-white">Gallery</h3>
+    <div class="d-inline-flex text-white">
+      <p class="m-0"><a class="text-white" href="">Home</a></p>
+      <p class="m-0 px-2">/</p>
+      <p class="m-0">Gallery</p>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Event Start -->
+<div class="container-fluid pt-5">
+  <div class="container">
+    <div class="text-center pb-2">
+      <p class="section-title px-5">
+        <span class="px-2">Latest Blog</span>
+      </p>
+      <h1 class="mb-4">Latest Articles From Blog</h1>
+    </div>
+    <div class="row pb-3" style="heigh: 800px">
+      {% for detail in events %}
+      <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow-sm mb-2" style="height: 500px">
+          <div style="height: 200px">
+            <video
+              src="{{ detail.event_video.url }}"
+              class="object-fit-contain card-img-top mb-2"
+              autoplay
+              muted
+              controls
+              style="width: 100%; height: 100%"
+              poster="{% static 'img/post-1.jpg'%}"
+            ></video>
+          </div>
+
+          <div class="card-body bg-light text-center p-4">
+            <h4>{{ detail.event_name }}</h4>
+            <p
+              id="description{{detail.id}}"
+              style="max-height: 50px; overflow: hidden; position: relative"
+              class="detail"
+            >
+              {{ detail.event_description }}
+            </p>
+            <a
+              id="toggleButton{{detail.id}}"
+              class="btn btn-primary px-4 mx-auto my-2"
+              onclick="showMore('{{detail.id}}')"
+            >
+              Read More
+            </a>
+          </div>
+
+          <script>
+            function showMore(id) {
+              var description = document.getElementById("description" + id);
+              var button = document.getElementById("toggleButton" + id);
+
+              if (description.style.maxHeight === "50px") {
+                description.style.maxHeight = "none";
+                button.textContent = "Show Less";
+              } else {
+                description.style.maxHeight = "50px";
+                button.textContent = "Read More";
+              }
+            }
+          </script>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- Event End -->
+
+<!-- Footer Start -->
+{% include "footer.html" %}
